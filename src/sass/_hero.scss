@@ -1,0 +1,299 @@
+.hero {
+  background-color: $main-bg-color;
+  .container {
+    @media screen and (min-width: 319px) and (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+    }
+    position: relative;
+  }
+
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    .about-icecream {
+      display: none;
+    }
+    .cafe {
+      display: none;
+    }
+    .plate-tablet {
+      display: none;
+    }
+  }
+
+  padding-top: 61px;
+  padding-bottom: 239px;
+  background-image: url(../images/hero/ellipse-mob-1x.png);
+  @media (min-resolution: 2dppx) {
+    background-image: url(../images/hero/ellipse-mob-2x.png);
+    background-size: auto 49px;
+  }
+  background-repeat: no-repeat;
+  background-position: bottom;
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 24px;
+    background-image: url(../images/hero/ellipse-tablet-1x.png);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/hero/ellipse-tablet-2x.png);
+      background-size: auto 67px;
+    }
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  @include desktop {
+    padding-top: 45px;
+    padding-bottom: 103px;
+    background-image: url(../images/hero/ellipse-desktop-1x.png);
+    @media (min-resolution: 2dppx) {
+      background-image: url(../images/hero/ellipse-desktop-2x.png);
+      background-size: auto 384px;
+    }
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  &__title {
+    max-width: 274px;
+    font-family: 'Seymour One';
+    @include font(400, 26px, 1.27, 0.04em);
+    text-transform: uppercase;
+    color: #fcfcfc;
+    @include tablet {
+      max-width: 181px;
+      font-family: 'Seymour One';
+      @include font(400, 18px, 1.28, null);
+      color: #fcfcfc;
+    }
+    @include desktop {
+      min-width: 367px;
+      font-family: 'Seymour One';
+      @include font(400, 38px, 1.26, 0.04em);
+      color: #fcfcfc;
+    }
+    & .pos {
+      font-size: 34px;
+      line-height: 0.97;
+      letter-spacing: 0.04;
+      @include tablet {
+        font-size: 24px;
+        line-height: 0.54;
+        letter-spacing: 0.04;
+      }
+      @include desktop {
+        font-size: 38px;
+        line-height: 1.26;
+        letter-spacing: 0.04;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 32px;
+    @include tablet {
+      margin-top: 20px;
+    }
+    @include desktop {
+      margin-top: 28px;
+    }
+    .hero__item:not(:last-child) {
+      margin-right: 8px;
+      @include desktop {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  &__link {
+    @include font(600, 8px, 1.25, null);
+    padding: 5px 10px;
+    font-family: $main-ff;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $accent-color;
+    background-color: transparent;
+    outline: none;
+    text-decoration: underline;
+    transition: color $timing-function $duratoin;
+    &:hover {
+      color: $hover-green-color;
+    }
+    &:focus {
+      color: $white-text-color;
+    }
+    &:disabled {
+      color: $disabled-color;
+    }
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.21;
+      padding: 12px 22px;
+      border-radius: 10px;
+    }
+  }
+
+  .list__ice {
+    position: absolute;
+    filter: drop-shadow(0 0 3.75rem rgba(252, 252, 252, 0.44));
+    z-index: 1;
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+      bottom: -239;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      bottom: -24;
+      right: 93;
+    }
+    @include desktop {
+      bottom: -103;
+      right: 102;
+    }
+  }
+
+  .list__face {
+    position: absolute;
+    z-index: 1;
+  }
+  .list__face:nth-child(2) {
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+      bottom: -141;
+      left: 50%;
+      transform: translateX(-90%);
+    }
+    @include tablet {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        bottom: 130;
+        left: 458;
+      }
+    }
+    @include desktop {
+      bottom: 163;
+      right: 298;
+    }
+  }
+  .list__face:nth-child(3) {
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+      bottom: -114;
+      left: 50%;
+      transform: translateX(-10%);
+    }
+    @include tablet {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        bottom: 173;
+        right: 110;
+      }
+    }
+    @include desktop {
+      bottom: 240;
+      right: 116;
+    }
+  }
+  .list__face:nth-child(4) {
+    @media screen and (min-width: 300px) and (max-width: 767px) {
+      bottom: -189;
+      left: 50%;
+    }
+    @include tablet {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        bottom: 55;
+        right: 96;
+      }
+    }
+    @include desktop {
+      bottom: 34;
+      right: 93;
+    }
+  }
+
+  @include tablet {
+    .hero__top {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .plate-tablet {
+      display: block;
+      position: absolute;
+      bottom: -11;
+      left: 32;
+      animation-name: rotation;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @include desktop {
+        left: 17;
+        bottom: -38;
+      }
+    }
+
+    .about-icecream {
+      max-width: 151px;
+      margin-top: 39px;
+      margin-left: 185px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 1.42;
+
+      color: #fcfcfc;
+
+      @include desktop {
+        margin-top: 111px;
+        margin-left: 240px;
+        font-size: 14px;
+        line-height: 1.43;
+        max-width: 200px;
+      }
+    }
+
+    .arrow-icon {
+      margin-top: 12px;
+      display: inline-block;
+      fill: #fcfcfc;
+      transition: transform $timing-function $duratoin;
+      &:hover,
+      &:focus {
+        transform: scale(1.25);
+        transform-origin: left;
+        outline: none;
+      }
+      @include desktop {
+        margin-top: 24px;
+      }
+    }
+
+    .cafe-track {
+      font-family: 'Montserrat';
+      @include font(900, 28px, 1.21, 0.04em);
+      text-align: right;
+      text-transform: uppercase;
+      color: #131313;
+      @include desktop {
+        @include font(900, 46px, 1.22, 0.04em);
+      }
+
+      .cafe-track-item {
+        font-family: 'Montserrat';
+        @include font(400, 8px, 1.25, null);
+        text-transform: lowercase;
+        text-align: right;
+        vertical-align: top;
+        color: #fcfcfc;
+        @include desktop {
+          @include font(400, 14px, 1.21, null);
+        }
+      }
+    }
+  }
+}
